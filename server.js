@@ -12,7 +12,8 @@ app.use(express.json());
 
 // Enable CORS for development
 app.use((req, res, next) => {
-    res.header('Access-Control-Allow-Origin', '*');
+    // This is the only line that has been updated
+    res.header('Access-Control-Allow-Origin', 'https://phegello.github.io');
     res.header('Access-Control-Allow-Headers', 'Content-Type');
     next();
 });
